@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:fillViewport="false">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +18,7 @@
     tools:context="id.sch.smktelkom_mlg.xirpl6034.pengumpulantugas.MainActivity"
     android:weightSum="1">
 
+
     <TextView
         android:layout_width="351dp"
         android:layout_height="wrap_content"
@@ -19,13 +26,14 @@
         android:id="@+id/textView1"
         style="@style/Base.TextAppearance.AppCompat.Subhead"/>
 
-    <ImageView
-        android:layout_width="221dp"
-        android:layout_height="125dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/ic_logo"
-        android:layout_gravity="center_horizontal"/>
 
+    <ImageView
+        android:layout_width="4708dp"
+        android:layout_height="307dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        />
 
     <EditText
         android:hint="Nama Siswa"
@@ -96,6 +104,9 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         tools:text="Hasil"
-        android:id="@+id/textViewHasil"/>
+        android:id="@+id/textViewHasil"
+        android:layout_gravity="center_horizontal"
+        android:text="Hasil"/>
 
 </LinearLayout>
+</ScrollView>

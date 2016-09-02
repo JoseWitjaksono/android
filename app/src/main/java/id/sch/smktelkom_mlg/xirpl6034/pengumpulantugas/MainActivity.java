@@ -42,22 +42,24 @@ public class MainActivity extends AppCompatActivity {
 			private void doClick() {
 				String hasil = null;
 				String tugas = "";
+				String tugas2 = "";
+				String tugas3 = "";
 
 				String nama = etNama.getText().toString();
 				if (cbUlangan.isChecked()) {
 					tugas = cbUlangan.getText().toString();
 				}
 				if (cbTugas.isChecked()) {
-					tugas = cbTugas.getText().toString();
+					tugas2 = "," + cbTugas.getText().toString() + ",";
 				}
 				if (cbLatihan.isChecked()) {
-					tugas = cbLatihan.getText().toString();
+					tugas3 = cbLatihan.getText().toString();
 				}
 				if (rgStatus.getCheckedRadioButtonId() != -1) {
 					RadioButton rb = (RadioButton)
 							findViewById(rgStatus.getCheckedRadioButtonId());
 					hasil = rb.getText().toString();
-					tvHasil.setText(nama + " " + hasil + " " + tugas1);
+					tvHasil.setText(nama + " " + hasil + " Mengumpulkan " + tugas + " " + tugas2 + " " + tugas3);
 				}
 			}
 		});
