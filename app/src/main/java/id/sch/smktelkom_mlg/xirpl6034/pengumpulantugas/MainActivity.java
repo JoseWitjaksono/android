@@ -41,12 +41,23 @@ public class MainActivity extends AppCompatActivity {
 
 			private void doClick() {
 				String hasil = null;
+				String tugas = "";
+
 				String nama = etNama.getText().toString();
+				if (cbUlangan.isChecked()) {
+					tugas = cbUlangan.getText().toString();
+				}
+				if (cbTugas.isChecked()) {
+					tugas = cbTugas.getText().toString();
+				}
+				if (cbLatihan.isChecked()) {
+					tugas = cbLatihan.getText().toString();
+				}
 				if (rgStatus.getCheckedRadioButtonId() != -1) {
 					RadioButton rb = (RadioButton)
 							findViewById(rgStatus.getCheckedRadioButtonId());
 					hasil = rb.getText().toString();
-					tvHasil.setText(nama + " " + hasil);
+					tvHasil.setText(nama + " " + hasil + " " + tugas1);
 				}
 			}
 		});
