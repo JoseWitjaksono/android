@@ -20,30 +20,25 @@
         style="@style/Base.TextAppearance.AppCompat.Subhead"/>
 
     <ImageView
-        android:layout_width="85dp"
-        android:layout_height="100dp"
+        android:layout_width="221dp"
+        android:layout_height="125dp"
         android:id="@+id/imageView"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_logo"
         android:layout_gravity="center_horizontal"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Siswa"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"/>
 
     <EditText
+        android:hint="Nama Siswa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editTextNama"
         android:layout_gravity="center_horizontal"/>
 
     <RadioGroup
         android:layout_width="209dp"
         android:layout_height="wrap_content"
-        >
+        android:id="@+id/radioGroupStatus"
+        android:measureWithLargestChild="true">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -86,7 +81,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Latihan"
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox3"
         android:checked="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/buttonOK"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="Hasil"
+        android:id="@+id/textViewHasil"/>
 
 </LinearLayout>
