@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 	CheckBox cbUlangan;
 	CheckBox cbTugas;
 	CheckBox cbLatihan;
+	Spinner spGuru;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 		cbUlangan = (CheckBox) findViewById(R.id.checkBox1);
 		cbTugas = (CheckBox) findViewById(R.id.checkBox2);
 		cbLatihan = (CheckBox) findViewById(R.id.checkBox3);
+		spGuru = (Spinner) findViewById(R.id.spinnerGuru);
 
 		bOK.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -50,16 +53,16 @@ public class MainActivity extends AppCompatActivity {
 					tugas = cbUlangan.getText().toString();
 				}
 				if (cbTugas.isChecked()) {
-					tugas2 = "," + cbTugas.getText().toString() + ",";
+					tugas2 = "," + cbTugas.getText().toString();
 				}
 				if (cbLatihan.isChecked()) {
-					tugas3 = cbLatihan.getText().toString();
+					tugas3 = "," + cbLatihan.getText().toString() + " ";
 				}
 				if (rgStatus.getCheckedRadioButtonId() != -1) {
 					RadioButton rb = (RadioButton)
 							findViewById(rgStatus.getCheckedRadioButtonId());
 					hasil = rb.getText().toString();
-					tvHasil.setText(nama + " " + hasil + " Mengumpulkan " + tugas + " " + tugas2 + " " + tugas3);
+					tvHasil.setText(nama + " " + hasil + " Mengumpulkan " + tugas + " " + tugas2 + " " + tugas3 + "Kepada " + spGuru.getSelectedItem().toString());
 				}
 			}
 		});

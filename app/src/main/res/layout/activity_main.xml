@@ -24,16 +24,16 @@
         android:layout_height="wrap_content"
         android:text="Laporan Pengumpulan Tugas"
         android:id="@+id/textView1"
-        style="@style/Base.TextAppearance.AppCompat.Subhead"/>
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_gravity="center_vertical"/>
 
 
     <ImageView
-        android:layout_width="4708dp"
-        android:layout_height="307dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:id="@+id/imageView"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center_horizontal"
-        />
+        android:src="@drawable/logo"
+        android:layout_gravity="center_vertical"/>
 
     <EditText
         android:hint="Nama Siswa"
@@ -43,7 +43,7 @@
         android:layout_gravity="center_horizontal"/>
 
     <RadioGroup
-        android:layout_width="209dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/radioGroupStatus"
         android:measureWithLargestChild="true">
@@ -53,15 +53,20 @@
             android:layout_height="wrap_content"
             android:text="Kelas X"
             android:id="@+id/radioButton2"
-            android:checked="false"/>
+            android:checked="false"
+            />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kelas XI"
             android:id="@+id/radioButton"
-            android:checked="false"/>
+            android:checked="false"
+            />
+
+
     </RadioGroup>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,7 +88,8 @@
         android:layout_height="wrap_content"
         android:text="Tugas Harian"
         android:id="@+id/checkBox2"
-        android:checked="false"/>
+        android:checked="false"
+        />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -91,6 +97,20 @@
         android:text="Latihan"
         android:id="@+id/checkBox3"
         android:checked="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Guru"
+        android:id="@+id/textView"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_gravity="center_horizontal"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/guru"
+        android:id="@+id/spinnerGuru"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -105,8 +125,8 @@
         android:gravity="center_horizontal"
         tools:text="Hasil"
         android:id="@+id/textViewHasil"
-        android:layout_gravity="center_horizontal"
-        android:text="Hasil"/>
+        android:text="Hasil"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"/>
 
 </LinearLayout>
 </ScrollView>
